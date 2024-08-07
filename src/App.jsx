@@ -50,7 +50,10 @@ const App = () => {
      <Route path='*' element={<NotFoundPage />} /> 
     <Route path = '/edit-job/:id' element={<EditJobPage updateJobSubmit={updateJob}/>} loader = { jobLoader } />  
     </Route>
-    )
+    ),
+    {
+      basename: "/job-search-handler"
+    }
   );
   return <RouterProvider router= {router} />
 
